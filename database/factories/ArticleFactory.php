@@ -6,18 +6,19 @@ use App\Models\Article;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Carbon;
 
-class ArticleFactory extends Factory{
+class ArticleFactory extends Factory
+{
     protected $model = Article::class;
 
     public function definition(): array
     {
         return [
-            'title' => $this->faker->word(),//
-'slug' => $this->faker->slug(),
-'body' => $this->faker->word(),
-'published_at' => Carbon::now(),
-'created_at' => Carbon::now(),
-'updated_at' => Carbon::now(),
+            'title' => $this->faker->word(), //
+            'slug' => $this->faker->slug(),
+            'body' => $this->faker->word(),
+            'published_at' => Carbon::now(),
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
         ];
     }
 }

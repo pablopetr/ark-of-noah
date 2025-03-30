@@ -1,10 +1,12 @@
 <?php
 
+use App\Livewire\Dashboard\Articles\Show;
+use App\Livewire\Home\Index;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', Index::class)->name('home');
+
+Route::get('/articles/{article:slug}', Show::class)->name('article.show');
 
 Route::middleware([
     'auth:sanctum',

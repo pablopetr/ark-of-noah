@@ -64,7 +64,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Home Path
+    | Index Path
     |--------------------------------------------------------------------------
     |
     | Here you may configure the path where users will get redirected during
