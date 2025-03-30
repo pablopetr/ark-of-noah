@@ -8,6 +8,12 @@
     <h1 class="text-5xl font-bold mt-8">
         {{ $article->title }}
     </h1>
+    <div class="py-4 flex justify-center">
+        <img src="{{ $article->cover_url }}"
+             alt="{{ $article->title }}"
+             class="max-w-full h-96 object-cover rounded-lg"
+         />
+    </div>
     <div class="mt-8">
         {!! $article->body !!}
     </div>

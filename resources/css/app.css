@@ -5,3 +5,10 @@
 [x-cloak] {
     display: none;
 }
+
+pre {
+    background: #1e293b;
+    color: #cbd5e1;
+    padding: 2rem;
+    margin: 2rem 0;
+}
