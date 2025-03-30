@@ -8,8 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * 
- *
  * @property int $id
  * @property string $title
  * @property string $slug
@@ -21,6 +19,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property-read mixed $cover_url
+ *
  * @method static \Database\Factories\ArticleFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Article newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Article newQuery()
@@ -38,6 +37,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Article whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Article withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Article withoutTrashed()
+ *
  * @mixin \Eloquent
  */
 class Article extends Model
@@ -63,7 +63,7 @@ class Article extends Model
     public function coverUrl(): Attribute
     {
         return Attribute::make(
-            get: fn ($value, $attributes) => $attributes['cover'] ? asset('storage/' . $attributes['cover']) : null,
+            get: fn ($value, $attributes) => $attributes['cover'] ? asset('storage/'.$attributes['cover']) : null,
         );
     }
 }
