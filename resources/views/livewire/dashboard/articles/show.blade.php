@@ -3,7 +3,7 @@
         <x-icons.arrow-left class="w-8 h-8" />
     </a>
     <p class="border-l-4 border-gray-300 pl-3 mt-8">
-        {{ $article->published_at->format('M d, Y') }}
+        {{ $article->published_at?->format('M d, Y') }}
     </p>
     <h1 class="text-5xl font-bold mt-8">
         {{ $article->title }}
