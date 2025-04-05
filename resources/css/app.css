@@ -12,3 +12,54 @@ pre {
     padding: 2rem;
     margin: 2rem 0;
 }
+
+.attachment__name {
+    display: none;
+}
+
+.attachment__size {
+    display: none;
+}
+
+#article-body ul li {
+    list-style: square;
+    margin-left: 10px;
+}
+
+.sun-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.sun {
+    font-size: 2rem;
+    color: #f1c40f;
+    animation: sunGlow 1s infinite ease-in-out;
+    display: inline-block;
+}
+
+@keyframes sunGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px #f1c40f, 0 0 10px #f1c40f;
+        filter: brightness(1);
+    }
+    50% {
+        text-shadow: 0 0 15px #f1c40f, 0 0 30px #f1c40f;
+        filter: brightness(1.8);
+    }
+}
+
+.slide-in {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+ .slide-out {
+     transform: translateX(150%);
+     transition: transform 0.3s ease-in-out;
+ }
+
+
+

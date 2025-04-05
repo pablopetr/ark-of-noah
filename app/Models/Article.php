@@ -63,7 +63,9 @@ class Article extends Model
     public function coverUrl(): Attribute
     {
         return Attribute::make(
-            get: fn ($value, $attributes) => $attributes['cover'] ? asset('storage/'.$attributes['cover']) : null,
+            get: fn ($value, $attributes) => $attributes['cover'] ?
+                asset('storage/'.$attributes['cover']) :
+                asset('images/article-placeholder.jpg'),
         );
     }
 }

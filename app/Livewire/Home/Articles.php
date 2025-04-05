@@ -11,7 +11,7 @@ class Articles extends Component
     public function render(): View
     {
         $articles = Article::query()
-            ->paginate(20);
+            ->paginate(12);
 
         return view('livewire.home.articles', [
             'articles' => $articles,

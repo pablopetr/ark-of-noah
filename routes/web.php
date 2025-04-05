@@ -4,7 +4,9 @@ use App\Livewire\Dashboard\Articles\Show;
 use App\Livewire\Home\Index;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', Index::class)->name('home');
+Route::get('/', \App\Livewire\Home\Articles::class)->name('home');
+Route::get('/articles', \App\Livewire\Home\Articles::class)->name('articles');
+Route::get('/projects', \App\Livewire\Home\Projects::class)->name('projects');
 
 Route::get('/articles/{article:slug}', Show::class)->name('article.show');
 

@@ -1,3 +1,6 @@
+@section('title', $article->title)
+@section('description', $article->description)
+
 <div>
     <a href="{{ route('home') }}" class="rounded-full bg-gray-100 flex items-center justify-center w-12 h-12">
         <x-icons.arrow-left class="w-8 h-8" />
@@ -14,7 +17,7 @@
              class="max-w-full h-96 object-cover rounded-lg"
          />
     </div>
-    <div class="mt-8">
+    <div class="mt-10 flex flex-col space-y-2" id="article-body">
         {!! $article->body !!}
     </div>
 </div>
