@@ -10,9 +10,11 @@ class Show extends Component
 {
     public Article $article;
 
-    public function mount(Article $article)
+    public function mount(Article $article): void
     {
         $this->article = $article;
+
+        $this->article->increment('views');
     }
 
     public function render(): View

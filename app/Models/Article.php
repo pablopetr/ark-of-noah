@@ -51,6 +51,10 @@ class Article extends Model
         'body',
         'cover',
         'published_at',
+        'language',
+        'views',
+        'likes',
+        'dislikes',
     ];
 
     protected function casts(): array

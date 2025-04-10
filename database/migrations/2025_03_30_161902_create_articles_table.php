@@ -15,6 +15,10 @@ return new class extends Migration
             $table->string('description');
             $table->longText('body');
             $table->dateTime('published_at')->nullable();
+            $table->string('language')->default('en');
+            $table->integer('views')->default(0);
+            $table->integer('likes')->default(0);
+            $table->integer('dislikes')->default(0);
             $table->string('cover')->nullable();
             $table->timestamps();
             $table->softDeletes();

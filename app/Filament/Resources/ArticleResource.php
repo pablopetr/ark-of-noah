@@ -15,7 +15,7 @@ class ArticleResource extends Resource
 {
     protected static ?string $model = Article::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     public static function form(Form $form): Form
     {
@@ -53,6 +53,13 @@ class ArticleResource extends Resource
                     ->enableOpen()
                     ->enableDownload(),
                 Forms\Components\DateTimePicker::make('published_at'),
+                Forms\Components\Select::make('language')
+                    ->options([
+                        'en' => 'English',
+                        'pt' => 'Portuguese',
+                    ])
+                    ->default('en')
+                    ->required(),
             ]);
     }
 

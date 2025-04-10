@@ -43,12 +43,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body class="font-sans antialiased" x-data="" x-cloak>
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div class="min-h-screen overflow-y-auto bg-gray-100 dark:bg-gray-900">
             <div class="max-w-7xl mx-auto">
                 <x-dashboard.header.index />
 
                 <!-- Page Content -->
-                <main class="min-h-screen border border-gray-200 dark:border-gray-800 rounded-xl p-6">
+                <main class="border border-gray-200 dark:border-gray-800 rounded-xl p-6 mb-10">
                     {{ $slot }}
                 </main>
             </div>

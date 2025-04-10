@@ -21,9 +21,25 @@ pre {
     display: none;
 }
 
+#article-body p {
+    margin: 0.75rem 0;
+}
+
 #article-body ul li {
     list-style: square;
-    margin-left: 10px;
+    margin-left: 2rem;
+}
+
+#article-body ol li {
+    list-style: decimal;
+    margin-left: 2rem;
+}
+
+#article-body h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .sun-button {
