@@ -48,6 +48,7 @@ class ArticleResource extends Resource
                     ->image()
                     ->required()
                     ->disk('s3')
+                    ->visibility('public')
                     ->maxSize(4096)
                     ->directory('articles'),
                 Forms\Components\DateTimePicker::make('published_at'),
