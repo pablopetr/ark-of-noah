@@ -47,11 +47,9 @@ class ArticleResource extends Resource
                 Forms\Components\FileUpload::make('cover')
                     ->image()
                     ->required()
+                    ->disk('s3')
                     ->maxSize(4096)
-                    ->preserveFilenames()
-                    ->directory('articles')
-                    ->enableOpen()
-                    ->enableDownload(),
+                    ->directory('articles'),
                 Forms\Components\DateTimePicker::make('published_at'),
                 Forms\Components\Select::make('language')
                     ->options([
